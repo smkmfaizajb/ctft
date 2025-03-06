@@ -6,7 +6,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 const USERNAME = "admin";
 const PASSWORD = "admin1234";
-const FLAG = "CTF{345yyy_login_bypass}";
+const FLAG = "CTFT{345yyy_login_bypass}";
 
 app.get("/", (req, res) => {
     res.send(`
