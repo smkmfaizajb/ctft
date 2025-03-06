@@ -1,0 +1,5 @@
+{
+    "functions": {
+      "api/index.js": { "runtime": "nodejs22.14.0" }
+    }
+  }
