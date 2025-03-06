@@ -1,6 +1,5 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const serverless = require("serverless-http"); // Tambahkan ini untuk Vercel
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -23,12 +22,12 @@ app.get("/", (req, res) => {
 app.post("/", (req, res) => {
     const { username, password } = req.body;
     if (username === USERNAME && password === PASSWORD) {
-        res.send('yeayy Login berhasil! Flag: ${FLAG}');
+        res.send(`yeayy Login berhasil! Flag: ${FLAG}`);
     } else {
         res.send("yahh Login gagal!");
     }
 });
 
-// Ubah ekspor untuk Vercel Serverless Functions
-module.exports = app;
-module.exports.handler = serverless(app);
+app.listen(3000, () => {
+    console.log("Server berjalan di http://localhost:3000");
+});
