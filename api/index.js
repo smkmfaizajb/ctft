@@ -13,7 +13,7 @@ const PASSWORD = "admin1234";
 const FLAG = "CTFT{345yyy_login_bypass}";
 
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "../views/login.html"));
+    res.sendFile(path.join(__dirname, "../public/login.html"));
 });
 
 app.post("/", (req, res) => {
