@@ -6,7 +6,7 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
-const FLAG = "CTFT{easysysy_sql_injection}";
+const FLAG = "CTFT{easysysy_f4ke_sql_injection}";
 
 // Data user hardcoded (simulasi database)
 const USERNAME = "admin";
