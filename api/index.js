@@ -5,15 +5,15 @@ const path = require("path");
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// Middleware untuk menyajikan file statis (CSS)
-app.use(express.static(path.join(__dirname, "public")));
+// Pastikan file statis bisa diakses
+app.use(express.static("public"));
 
 const USERNAME = "admin";
 const PASSWORD = "admin1234";
 const FLAG = "CTFT{345yyy_login_bypass}";
 
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "views", "login.html"));
+    res.sendFile(path.join(__dirname, "../views/login.html"));
 });
 
 app.post("/", (req, res) => {
@@ -25,6 +25,5 @@ app.post("/", (req, res) => {
     }
 });
 
-app.listen(3000, () => {
-    console.log("Server berjalan di http://localhost:3000");
-});
+// Ekspor app untuk digunakan di Vercel
+module.exports = app;
