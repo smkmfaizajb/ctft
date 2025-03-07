@@ -6,11 +6,11 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
-const FLAG = "CTFT{fake_sql_injection_bypass}";
+const FLAG = "CTFT{easysysy_sql_injection}";
 
 // Data user hardcoded (simulasi database)
 const USERNAME = "admin";
-const PASSWORD = "admin1234";
+const PASSWORD = "adminFaiz";
 
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "../public/login.html"));
