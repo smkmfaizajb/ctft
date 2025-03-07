@@ -8,7 +8,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Pastikan file statis bisa diakses
 app.use(express.static("public"));
 
-const USERS = "admin";
+const USERNAME = "admin";
 const PASSWORD = "admin1234";
 const FLAG = "CTFT{345yyy_login_bypass}";
 
